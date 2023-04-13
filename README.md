@@ -8,16 +8,16 @@ This is a group project using API's to allow users to:
 
 # User Story  
 
-AS AN 
-I WANT 
-SO THAT 
+AS AN   
+I WANT   
+SO THAT   
 
 
 # Acceptance Criteria  
 
-GIVEN 
-WHEN 
-THEN 
+GIVEN   
+WHEN   
+THEN   
 
 
 
