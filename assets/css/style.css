@@ -23,3 +23,15 @@ html {
   .list-items {
     display: inline-flex;
   }
+
+  li + li {
+    margin-left: 15px;
+  }
+  
+  .ui-helper-hidden-accessible {
+    display: none !important;
+  }
+  
+  #user-input {
+    max-width: 15%;
+  }
