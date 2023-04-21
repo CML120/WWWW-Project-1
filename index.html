@@ -11,19 +11,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-
-    <header>
-        <div>
-
+    <div id="wrapper">
+        <header>
+          <h1 class="title is-size-1 has-text-centered is-family-sans-serif py-2">
+            Hometown Sound</h1>
+        </header>
+        <div class="subtitle has-text-centered has-text-white py-2">
+          <p id="info">Hometown Sound is a premier web application to find where your favorite artist is performing next.
+          </p>
         </div>
-        <!-- Search Bar -->
-    </header>
-        <h3>Search your genre here</h3>
-        <div>
-            <label for="genre"></label>
-            <input type="text">
-            <button>Search</button>
-        </div>
+        <div class="column has-text-centered my-5 is-size-5">
+          <h3 class="my-5" id="keyword-search">Search an artist here</h3>
+          <div id="searchKeyword" class="my-5">
+            <label for="keyword"></label>
+            <input type="text" id="user-input" class="ui-autocomplete-input input is-default" placeholder="i.e. Metallica"
+              autocomplete="off">
+            <button id="searchBtn" class="button is-default is-link">Search</button>
 
         <!--  event info pop up by ticketmaster & soundcloud api with card idea. hidden until search-->
     <section>
