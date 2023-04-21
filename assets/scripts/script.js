@@ -147,3 +147,24 @@ function deleteAppends() {
   }
   $("#searchedKeywords").empty();
 }
+
+function apiSpotifyURL(num) {
+    var client_id = "b8a40684aaf24623a0845d2de7d55422";
+    var client_secret = "059928fa94f647a3ad310fbb22d30473";
+    //Gets the token for Spotify Oauth
+    fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body:
+        "grant_type=client_credentials&client_id=" +
+        client_id +
+        "&client_secret=" +
+        client_secret,
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var spotifyBearerToken = data.access_token;
