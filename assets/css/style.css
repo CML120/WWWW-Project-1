@@ -35,3 +35,16 @@ html {
   #user-input {
     max-width: 15%;
   }
+  
+  li {
+    font-style: italic;
+    cursor: pointer;
+  }
+  
+  #advice {
+    font-family: "Arima Madurai", cursive;
+  }
+  
+  #attractions {
+    font-family: "Source Serif 4", serif;
+  }
