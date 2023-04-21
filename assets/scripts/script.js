@@ -29,3 +29,20 @@ $(document).ready(function () {
     getSearchedKeyword();
   });
 });
+
+function autoKeywords() {
+    var availableKeyword = [
+      "Jazz",
+      "Pop Music",
+      "Rock",
+      "Country",
+      "Reggae",
+      "Hip Hop",
+      "Pop Rock",
+      "Blues",
+    ];
+    $("#user-input").autocomplete({
+      source: availableKeyword,
+      minLength: 3,
+    });
+  }
