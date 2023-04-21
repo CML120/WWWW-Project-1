@@ -11,3 +11,15 @@ html {
     height: 300px;
     width: 300px;
   }
+  .ui-autocomplete {
+    color: purple;
+    border-color: black;
+    font-weight: bold;
+    border-style: solid;
+    width: 150px;
+    background-color: white;
+  }
+  
+  .list-items {
+    display: inline-flex;
+  }
