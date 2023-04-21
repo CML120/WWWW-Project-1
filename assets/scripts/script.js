@@ -18,4 +18,14 @@ $(document).ready(function () {
       getSearchedKeyword();
     }
   });
+  // Function to when any li (previous searched keywords) is clicked
+  $(document).on("click", "li", function (e) {
+    e.preventDefault();
+    deleteAppends();
+    // Saving clicked keyword into variable to be passed into function that gets events info for keyword searched and shows previous searched keyword if any
+    var userinput = $(this).text();
+    artistName = userinput;
+    getEventByKeyword(userinput);
+    getSearchedKeyword();
+  });
 });
