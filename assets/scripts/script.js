@@ -149,22 +149,41 @@ function deleteAppends() {
 }
 
 function apiSpotifyURL(num) {
-    var client_id = "b8a40684aaf24623a0845d2de7d55422";
-    var client_secret = "059928fa94f647a3ad310fbb22d30473";
-    //Gets the token for Spotify Oauth
-    fetch("https://accounts.spotify.com/api/token", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body:
-        "grant_type=client_credentials&client_id=" +
-        client_id +
-        "&client_secret=" +
-        client_secret,
+  var client_id = "b8a40684aaf24623a0845d2de7d55422";
+  var client_secret = "059928fa94f647a3ad310fbb22d30473";
+  //Gets the token for Spotify Oauth
+  fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body:
+      "grant_type=client_credentials&client_id=" +
+      client_id +
+      "&client_secret=" +
+      client_secret,
+  })
+    .then(function (response) {
+      return response.json();
     })
-      .then(function (response) {
+    .then(function (data) {
+      var spotifyBearerToken = data.access_token;
+      //nested fetch to make Spotify api query, using the bearer token previously obtained
+      //bearer token will be out of scope and undefined if not not nested here
+      fetch('https://api.spotify.com/v1/search?query=' + artistName + '&type=artist&market=us&limit=10&offset=0', {
+        headers: { 'Authorization': `Bearer ${spotifyBearerToken}` }
+      }).then(function (response) {
         return response.json();
       })
-      .then(function (data) {
-        var spotifyBearerToken = data.access_token;
+        .then(function (data) {
+          //gets artist URL link
+          var hrefLink = data.artists.items[0].external_urls;
+          //appends spotify link 
+          $("#attraction-" + num).append(
+            '<p><a target="_blank" href="' +
+            hrefLink.spotify +
+            '" class= "has-text-weight-bold has-text-danger-dark is-size-4">Listen @ Spotify</a></p>'
+          );
+        })
+    })
+}
