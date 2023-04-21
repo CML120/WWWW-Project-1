@@ -80,37 +80,50 @@ function getEventByKeyword(userinput) {
       else {
         $(attractions).hide();
       }
-// Function to append on page title, image, date, time, location and link to buy tickets for the event. Class "is-size" is adding size font; class "has-text-warning" is adding font color with Bulma
-function appendEvents(num, index) {
-  var cardDisplay =
-    `
+      // Function to append on page title, image, date, time, location and link to buy tickets for the event. Class "is-size" is adding size font; class "has-text-warning" is adding font color with Bulma
+      function appendEvents(num, index) {
+        var cardDisplay =
+          `
     <h2 class= "is-size-4 has-text-warning " >` +
-    data._embedded.events[index].name +
-    `</h2>
+          data._embedded.events[index].name +
+          `</h2>
     <img src="` +
-    data._embedded.events[index].images[0].url +
-    `"></img>
+          data._embedded.events[index].images[0].url +
+          `"></img>
     <p class= "is-size-5 "> Date: ` +
-    dayjs(data._embedded.events[index].dates.start.dateTime).format(
-      "MMM-DD-YYYY"
-    ) +
-    `</p>
+          dayjs(data._embedded.events[index].dates.start.dateTime).format(
+            "MMM-DD-YYYY"
+          ) +
+          `</p>
     <p class= "is-size-5"> Time: ` +
-    dayjs(data._embedded.events[index].dates.start.dateTime).format(
-      "h:mm A"
-    ) +
-    `</p>
+          dayjs(data._embedded.events[index].dates.start.dateTime).format(
+            "h:mm A"
+          ) +
+          `</p>
     <p class= "is-size-5">` +
-    "Location: " +
-    data._embedded.events[index]._embedded.venues[0].name +
-    ` </p>
+          "Location: " +
+          data._embedded.events[index]._embedded.venues[0].name +
+          ` </p>
     <a target="_blank" href="` +
-    data._embedded.events[index].url +
-    `"class= "has-text-weight-bold has-text-danger-dark is-size-4">Purchase Tickets Here</a>
+          data._embedded.events[index].url +
+          `"class= "has-text-weight-bold has-text-danger-dark is-size-4">Purchase Tickets Here</a>
     `;
-  $("#attraction-" + num).append(cardDisplay);
-  apiSpotifyURL(num);
+        $("#attraction-" + num).append(cardDisplay);
+        apiSpotifyURL(num);
+      }
+    });
 }
-});
-
+// Function to save in local storage searched keywords
+function saveSearchedKeyword() {
+  // Get correct keyword name from local storage to add to new array in variable Keywords
+  var KeywordCorrectName = JSON.parse(
+    localStorage.getItem("KeywordCorrectName")
+  );
+  if (KeywordCorrectName) {
+    var keys = JSON.parse(localStorage.getItem("keys")) || [];
+    // Limits number of saved keywords in local storage to 4 by removing the last keyword if more are added
+    if (keys.length >= 5) {
+      keys.pop();
+    }
+  }
 }
