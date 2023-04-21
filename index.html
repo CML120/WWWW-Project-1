@@ -27,7 +27,19 @@
             <input type="text" id="user-input" class="ui-autocomplete-input input is-default" placeholder="i.e. Metallica"
               autocomplete="off">
             <button id="searchBtn" class="button is-default is-link">Search</button>
-
+<div class="is-flex is-justify-content-space-around mt-5" id="search-results">
+          <!-- Searched keywords will be appended here via JS-->
+          <ul id="searchedKeywords" class="list-items"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- Events info provided by Ticketmaster API will be appended here via JS, one in each column -->
+    <div id="attractions" class="columns has-text-centered">
+      <div class="column card m-1 mt-3 has-text-black  ml-4" id="attraction-0"></div>
+      <div class="column m-1 card mt-3 has-text-black " id="attraction-1"></div>
+      <div class="column m-1 card mt-3 has-text-black " id="attraction-2"></div>
+    </div>
+  </div>
         <!--  event info pop up by ticketmaster & soundcloud api with card idea. hidden until search-->
     <section>
         <div>
