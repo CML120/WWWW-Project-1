@@ -125,5 +125,10 @@ function saveSearchedKeyword() {
     if (keys.length >= 5) {
       keys.pop();
     }
+    // Only saves the keyword name in local storage once (if it is removed from the array per if statemnt above, it can be added to array again); adds it to the beggining of the array
+    if (!keys.includes(KeywordCorrectName)) {
+      keys.unshift(KeywordCorrectName);
+    }
+    localStorage.setItem("keys", JSON.stringify(keys));
   }
 }
