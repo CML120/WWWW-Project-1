@@ -31,18 +31,31 @@ $(document).ready(function () {
 });
 
 function autoKeywords() {
-    var availableKeyword = [
-      "Jazz",
-      "Pop Music",
-      "Rock",
-      "Country",
-      "Reggae",
-      "Hip Hop",
-      "Pop Rock",
-      "Blues",
-    ];
-    $("#user-input").autocomplete({
-      source: availableKeyword,
-      minLength: 3,
-    });
-  }
+  var availableKeyword = [
+    "Jazz",
+    "Pop Music",
+    "Rock",
+    "Country",
+    "Reggae",
+    "Hip Hop",
+    "Pop Rock",
+    "Blues",
+  ];
+  $("#user-input").autocomplete({
+    source: availableKeyword,
+    minLength: 3,
+  });
+}
+
+// Function to call Ticketmaster API with keyword as query parameter
+function getEventByKeyword(userinput) {
+  // Variable to house Ticketmaster API key
+  var apiKey = "aSqzhWcc1ZxQnMoClqxGxcTRL8GrgFyA";
+  // Variable to house Ticketmaster API URL
+  var eventsUrl =
+    "https://app.ticketmaster.com/discovery/v2/events?apikey=" +
+    apiKey +
+    "&keyword=" +
+    userinput;
+  fetch(eventsUrl);
+}
