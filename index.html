@@ -27,22 +27,31 @@
             <input type="text" id="user-input" class="ui-autocomplete-input input is-default" placeholder="i.e. Metallica"
               autocomplete="off">
             <button id="searchBtn" class="button is-default is-link">Search</button>
-
-        <!--  event info pop up by ticketmaster & soundcloud api with card idea. hidden until search-->
-    <section>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+<div class="is-flex is-justify-content-space-around mt-5" id="search-results">
+          <!-- Searched keywords will be appended here via JS-->
+          <ul id="searchedKeywords" class="list-items"></ul>
         </div>
-    </section>
-
-
-    <Footer>
-
-    </Footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-    <script src="./assets/scripts/script.js"></script>
+      </div>
+    </div>
+    <!-- Events info provided by Ticketmaster API will be appended here via JS, one in each column -->
+    <div id="attractions" class="columns has-text-centered">
+      <div class="column card m-1 mt-3 has-text-black  ml-4" id="attraction-0"></div>
+      <div class="column m-1 card mt-3 has-text-black " id="attraction-1"></div>
+      <div class="column m-1 card mt-3 has-text-black " id="attraction-2"></div>
+    </div>
+  </div>
+  
+      <!-- Link to Day.js -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
+  </script>
+<!-- Link to jQuery v3.2.1 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Link to jQuery v3.6.0 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- Link to jQuery UI v1.13.2 -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<!-- Link to JavaScript file -->
+<script src="./assets/scripts/script.js"></script>
 </body>
 </html>
