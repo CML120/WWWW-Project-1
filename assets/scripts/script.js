@@ -57,5 +57,28 @@ function getEventByKeyword(userinput) {
     apiKey +
     "&keyword=" +
     userinput;
-  fetch(eventsUrl);
+
+  fetch(eventsUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // If the keyword entered on search box has ticketmaster events available, events' info will be added to page
+      if (data.page.totalElements != "0") {
+        $(attractions).show();
+        for (let i = 0; i < 3; i++) {
+          appendEvents(i, i);
+          // Saving name of the keyword in local storage according to name available in API (corrected name)
+          localStorage.setItem(
+            "KeywordCorrectName",
+            JSON.stringify(artistName)
+          );
+          saveSearchedKeyword();
+        }
+      }
+      // If the keyword entered on search box does not have ticketmaster events available, attractions div will keep hidden
+      else {
+        $(attractions).hide();
+      }
+    });
 }
