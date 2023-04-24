@@ -23,17 +23,18 @@ AS AN event goer and music enthusiast
 I WANT to find music venues that I like  
 SO THAT I can make a decision to go to a music event I will enjoy
 
-# Acceptance Criteria
+# Acceptance Criteria  
 
-GIVEN search form with inputs  
-WHEN I search for an artist or band  
-THEN then I am presented with upcoming events by the artist  
-WHEN I receive the results
-THEN I can see the event name, date, time, location, where to purchase tickets, and listen to the artist
-WHEN I click on the purchase ticket link
-THEN I am taken to Ticketmaster where I can buy tickets for the event
-WHEN I click on the Spotify link
-THEN I am taken to the arist's spotify page
+GIVEN search form with inputs   
+WHEN I search for an artist or band     
+THEN then I am presented with upcoming events by the artist     
+WHEN I receive the results  
+THEN I can see the event name, date, time, location, where to purchase tickets, and listen to the artist  
+WHEN I click on the purchase ticket link  
+THEN I am taken to Ticketmaster where I can buy tickets for the event  
+WHEN I click on the Spotify link  
+THEN I am taken to the arist's spotify page    
+
 
 ![image](https://user-images.githubusercontent.com/126404917/233425604-aa37f9a0-50f8-46f9-a99e-aeb9c3b2a6d9.png)
 
