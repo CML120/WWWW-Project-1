@@ -1,29 +1,27 @@
 # WWWW-Project: Hometown Sound
+
 Group Project 1: UoM week 7
-This is a group project using API's to allow users to:  
-1. Search for music venues 
+This is a group project using API's to allow users to:
+
+1. Search for music venues
 2. Purchase tickets to go to the resulting event
 3. Listen to the artists via Spotify
 
 Technologies Used:  
 Bulma CSS Framework  
-https://bulma.io/  
+https://bulma.io/
 
 Ticketmaster Web API  
-https://developer.ticketmaster.com/products-and-docs/apis/getting-started/  
+https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
 
 Spotify Web API  
 https://developer.spotify.com/documentation/web-api
 
+# User Story
 
-
-
-# User Story  
-
-AS AN event goer and music enthusiast    
-I WANT to find music venues that I like     
-SO THAT I can make a decision to go to a music event I will enjoy     
-
+AS AN event goer and music enthusiast  
+I WANT to find music venues that I like  
+SO THAT I can make a decision to go to a music event I will enjoy
 
 # Acceptance Criteria  
 
@@ -40,8 +38,13 @@ THEN I am taken to the arist's spotify page
 
 ![image](https://user-images.githubusercontent.com/126404917/233425604-aa37f9a0-50f8-46f9-a99e-aeb9c3b2a6d9.png)
 
-  
-
-
 Deployment link: https://cml120.github.io/WWWW-Project-1/
 
+# Credits
+
+With the help of instruction and guidance of the staff of the UofM coding boot camp, nor without the resources at W3 and the Mozilla Developers Network.
+
+Chee Lor - https://github.com/CML120
+Nate Trask - https://github.com/N8Trask
+Gabriel Vang -https://github.com/Vang662
+Daniel Son - https://github.com/sonjdaniel
