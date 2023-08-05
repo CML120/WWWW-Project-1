@@ -16,7 +16,7 @@ https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
 
 Spotify Web API  
 https://developer.spotify.com/documentation/web-api
-
+```md
 # User Story
 
 AS AN event goer and music enthusiast  
@@ -34,7 +34,7 @@ WHEN I click on the purchase ticket link
 THEN I am taken to Ticketmaster where I can buy tickets for the event  
 WHEN I click on the Spotify link  
 THEN I am taken to the arist's spotify page    
-
+```
 
 ![image](https://user-images.githubusercontent.com/126404917/233425604-aa37f9a0-50f8-46f9-a99e-aeb9c3b2a6d9.png)
 
@@ -44,7 +44,7 @@ Deployment link: https://cml120.github.io/WWWW-Project-1/
 
 With the help of instruction and guidance of the staff of the UofM coding boot camp, nor without the resources at W3 and the Mozilla Developers Network.
 
-Chee Lor - https://github.com/CML120
-Nate Trask - https://github.com/N8Trask
-Gabriel Vang -https://github.com/Vang662
-Daniel Son - https://github.com/sonjdaniel
+Chee Lor - https://github.com/CML120  
+Nate Trask - https://github.com/N8Trask  
+Gabriel Vang -https://github.com/Vang662  
+Daniel Son - https://github.com/sonjdaniel  
